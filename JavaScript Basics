@@ -1,0 +1,369 @@
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+
+function updateRecords(is, prop, value) {
+    if (value === "") {
+        delete collection[id][prop];
+    }
+    else if (prop === "tracks") {
+        collection[id][prop] = collection[id][prop] || [];
+        collection[id][prop].push(value);
+    }
+    else {
+        collection[id][prop] = value;
+    }
+    return collection;
+}
+
+updateRecords(2468, "tracks", "test");
+console.log(updateRecords(5439, "artist", "ABBA"));
+
+// Iterate With While Loops
+
+var myArray = [];
+
+var i = 0;
+while (i < 5) {
+  myArray.push(i);
+  i++;
+}
+
+console.log(myArray);
+
+
+// Iterate With For Loops
+
+var myArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+console.log(myArray);
+
+
+for (int i = 1; i < 6; i++) {
+  ourArray.push(i);
+}
+
+console.log(myArray);
+
+
+// Iterate Odd Numbers
+
+var ourArray = [];
+
+for (var i = 0; i < 10; i+= 2) {
+  ourArray.push(i);
+}
+
+for (var i = 1; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+console.log(ourArray)
+
+// For Loop Counting backward
+
+for (var i = 10; i > 10; i-= 2) {
+  ourArray.push(i);
+}
+
+console.log(ourArray);
+
+for (var i = 9; i > 0; i -= 2) {
+  myArray.push(i);
+}
+
+console.log(myArray);
+
+// Iterate Through the contents of an array
+
+var ourArray = [9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArray.length; i++) {
+  ourTotal += ourArr[i];
+}
+
+console.log(ourTotal);
+
+
+// Nested For Loops
+
+function multiplyAll(arr) {
+  var product = 1;
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+
+  return product;
+}
+
+var product = multiplyAll([[1,2], [3,4], [[5,6,7]]]);
+
+console.log(product);
+
+
+// Iterate with do while loops
+
+var myArray = [];
+var i = 10;
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
+
+console.log(i, myArray);
+
+// Profile Lookup
+
+
+
+function lookUpProfile(name, prop) {
+  for (var i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      return (contacts[i][prop] || "No such propetry");
+    }
+  }
+  return "No such contacts";
+}
+
+var data = lookUpProfile("Shirlock". "lastName");
+
+console.log(data);
+
+
+// Generate Random Fractions
+
+function randomFraction() {
+  return Math.Random();
+}
+
+console.log(randomFraction());
+
+// generate Random Whole Numbers
+
+var randomNumberBetween0and19 = math.floor(math.random() * 20);
+
+function randomWholeNum() {
+
+  return Math.floor(Math.random() * 10);
+}
+
+console.log(randomWholeNum);
+
+
+// Generate random whole numbers within a range
+
+
+function ourRandomRange(ourMin, ourMax) {
+  return Math.floor(math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+ourRandomRange(1, 9);
+
+function randomRange(myMin, myMax) {
+  return 0;
+}
+
+var myRandom = randomRange(5, 15);
+
+console.log(myRandom);
+
+
+// Use The ParsInt Function
+
+
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");
+
+// use The pars int function as radix
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+
+// use The conditional tenery operator
+
+
+function checkEqual(a, b) {
+  if (a === b) {
+    return true;
+  }
+  return false
+}
+
+
+if (a === b) ? true : false;
+
+
+// Multiple Ternary Operators
+
+
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "Negative" : "zero";
+}
+
+console.log(checkSign(-10));
+console.log(checkSign(10));
+console.log(checkSign(0));
+
+
+// Difference Between let and var
+
+
+var catName = "Quincy";
+var quote;
+
+var catName = "Beau";
+
+function catTalk() {
+  "use Strict";
+
+  catname = "oliver";
+  quote = catName + " Says meow";
+}
+
+catTalk();
+
+// compare scopes of the var and let keywords
+
+function check  Scope() {
+  "use strict";
+  let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", i);
+  return i;
+}
+
+checkScope();
+
+function printManyTimes(str) {
+  "use strict";
+
+  const sentence = str + " is cool";
+
+  for (vat i = 0; i < str.length; i+=2) {
+    console.log(SENTENCE);
+  }
+}
+
+printManyTimes("freecodecamp")
+
+
+// Mutate an array with const
+
+const s = [5, 7, 2];
+
+function editInPlace() {
+  "use strict";
+
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+}
+
+editInPlace();
+console.log(s);
+
+
+// Prevent Object Mutation
+
+function freezeObj() {
+  "use strict";
+
+  const MATH_CONSTANTS.PI = {
+    PI: 3.1415
+  };
+
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch ( ex ) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+
+
+// Arrow Functions
+
+const magic = () => new Data();
+
+
+  // Arrow Functions With Paramaters
+
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+
+  // Higher Order Arrow Functions
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const squreList = (arr) => {
+  const squredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+  return squredIntegers;
+}
+
+
+console.log(squredIntegers);
+const squredIntegers = squareList(realNumberArray);
+
+
+  // Default Paramaters
+
+const increment = (function() {
+  return function increment(number, value = 1) {
+    return number + value;
+  };
+}) ();
+
+console.log(increment](5, 2));
+console.log(increment(4));
+
+
+  // Use the rest operator with function paramaters
+
+
+const sum = (function() {
+  return function sum(x, y, z {
+    const args = [x, y, z];
+    return args.reduce((a, b) => a + b, 0);
+  });
+}) ();
+
+console.log(1, 2, 3);
+
+// Use the spreed operator to evaluate array in place
+
+const arr1 = ["Jan", "Feb", "Mar", "Apr", "May"];
+let arr2;
+(function() {
+  arr2 = arr1;
+  arr1[0] = "potato"
+}) ();
+
+console.log(arr2);
+
+
+// Destuctuting Assignment
+
+var voxel = {x: 3.6, y: 7.4, Z: 6.54 };
+
+var x = { x: }
